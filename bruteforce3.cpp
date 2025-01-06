@@ -33,7 +33,7 @@ int rec(int n) {
     if (n == 0) {
         return 0;
     }
-    if (dp[n] != -1) {
+    if (dp[n] != -2) {
         return dp[n];
     }
     int a_ = rec(n - a), b_ = rec(n - b), c_ = rec(n - c);
@@ -50,6 +50,6 @@ int rec(int n) {
 }
 
 int main() {
-    fill(dp, dp + N, -1);
+    fill(dp, dp + N, -2);
 
 }
